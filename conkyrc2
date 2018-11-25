@@ -1,0 +1,150 @@
+conky.config = {
+background = false,
+update_interval = 1.0,
+cpu_avg_samples = 2,
+net_avg_samples = 2,
+override_utf8_locale = true,
+double_buffer = true,
+no_buffers = true,
+text_buffer_size = 2048,
+temperature_unit = 'celsius',
+own_window_class = 'Conky',
+own_window = true,
+own_window_type = 'desktop',
+own_window_transparent = true,
+own_window_argb_visual = true,
+own_window_argb_value = 255,
+own_window_colour = '000000',
+own_window_hints = 'undecorated','sticky','skip_taskbar','skip_pager','below',
+border_inner_margin = 0,
+border_outer_margin = 0,
+minimum_height = 1024,
+minimum_width = 256,
+maximum_width = 256,
+alignment = 'top_right',
+gap_x = 255,
+gap_y = 0,
+draw_shades = false,
+draw_outline = false,
+draw_borders = false,
+draw_graph_borders = false,
+default_color = 'gray',
+default_shade_color = 'red',
+default_outline_color = 'green',
+use_xft = true,
+override_utf8_locale = true,
+font = 'monospace:size=6',
+xftalpha = 0,
+uppercase =false,
+default_color = 'FFFFFF',
+}
+conky.text = [[
+#leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+${voffset 80}${alignr}$font Resources ─────
+${alignr}$font │      
+${alignr}$font read ──┤      
+${alignr}$font $diskio_read ──┘    │      
+${alignr}$font write ──┤      
+${alignr}$font $diskio_write ──┘    │      
+${alignr}$font │      
+${alignr}$font ram ──┤      
+${alignr}$font │    │      
+${alignr}$font  used ──┤    │      
+${alignr}$font │    │    │      
+${alignr}$font $memperc% ──┤    │    │      
+${alignr}$font $mem $memmax ──┘    │    │      
+${alignr}$font │    │      
+${alignr}$font ${memgraph 9,120} ──┤    │      
+${alignr}$font │    │      
+${alignr}$font ${top_mem name 1}  ${top_mem mem 1} ──┤    │      
+${alignr}$font ${top_mem name 2}  ${top_mem mem 2} ──┤    │      
+${alignr}$font ${top_mem name 3}  ${top_mem mem 3} ──┤    │      
+${alignr}$font ${top_mem name 4}  ${top_mem mem 4} ──┤    │      
+${alignr}$font ${top_mem name 5}  ${top_mem mem 5} ──┘    │      
+${alignr}$font │      
+${alignr}$font │      
+${alignr}$font swap ──┤      
+${alignr}$font │    │      
+${alignr}$font $swapperc% ──┤    │      
+${alignr}$font $swap $swapmax ──┤    │      
+${alignr}$font │    │      
+${alignr}$font ${swapbar 5,120} ──┘    │      
+${alignr}$font │      
+${alignr}$font root ──┘      
+${alignr}$font │           
+${alignr}$font ${fs_free_perc /}% ──┤           
+${alignr}$font ${fs_used /}/${fs_size /} ──┤           
+${alignr}$font │           
+${alignr}$font ${fs_bar 5,120 /} ──┘           
+${voffset -360}${alignr}$font ┌────────────────────────                
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font └─────────────────────────────────────┐  
+${alignr}$font │  
+${alignr}$font │  
+${alignr}$font Network ──┘  
+${alignr}$font │      
+${alignr}$font download ──┤      
+${alignr}$font │    │      
+${alignr}$font ${downspeed wlp2s0} ──┤    │      
+${alignr}$font ${totaldown wlp2s0} ──┤    │      
+${alignr}$font  ${downspeedgraph wlp2s0 9,120} ──┘    │      
+${alignr}$font │      
+${alignr}$font │      
+${alignr}$font upload ──┘      
+${alignr}$font │           
+${alignr}$font ${upspeed wlp2s0} ──┤           
+${alignr}$font ${totalup wlp2s0} ──┤           
+${alignr}$font ${upspeedgraph wlp2s0 9,120} ──┘           
+${voffset -140}${alignr}$font ┌──────────────────────────              
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font │                                        
+${alignr}$font └─────────────────────────────────────   
+]]

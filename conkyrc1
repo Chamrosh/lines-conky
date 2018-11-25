@@ -1,0 +1,161 @@
+conky.config = {
+background = false,
+update_interval = 1.0,
+cpu_avg_samples = 2,
+net_avg_samples = 2,
+override_utf8_locale = true,
+double_buffer = true,
+no_buffers = true,
+text_buffer_size = 2048,
+temperature_unit = 'celsius',
+own_window_class = 'Conky',
+own_window = true,
+own_window_type = 'desktop',
+own_window_transparent = true,
+own_window_argb_visual = true,
+own_window_argb_value = 255,
+own_window_colour = '000000',
+own_window_hints = 'undecorated','sticky','skip_taskbar','skip_pager','below',
+border_inner_margin = 0,
+border_outer_margin = 0,
+minimum_height = 1024,
+minimum_width = 256,
+maximum_width = 256,
+alignment = 'top_right',
+gap_x = 0,
+gap_y = 40,
+draw_shades = false,
+draw_outline = false,
+draw_borders = false,
+draw_graph_borders = false,
+default_color = 'gray',
+default_shade_color = 'red',
+default_outline_color = 'green',
+use_xft = true,
+override_utf8_locale = true,
+font = 'monospace:size=6',
+xftalpha = 0,
+uppercase =false,
+default_color = 'FFFFFF',
+}
+conky.text = [[
+#leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+${alignr}$font ┌──
+${alignr}$font │  
+${alignr}$font ${sysname}
+${alignr}$font │  
+${alignr}$font Time ──┤  
+${alignr}$font │   │  
+${alignr}$font the time ──┤   │  
+${alignr}$font ${time %H:%M:%S} ──┘    │   │  
+${alignr}$font │   │  
+${alignr}$font Battery ──┤   │  
+${alignr}$font ${battery_percent BAT0}% ──┤    │   │  
+${alignr}$font ${battery_bar 2,120 BAT0} ──┘    │   │  
+${alignr}$font │   │  
+${alignr}$font date ──┘   │  
+${alignr}$font ${time %A %d %b %Y} ──┘        │  
+${alignr}$font │  
+${alignr}$font ${nodename} ──┘  
+${alignr}$font │      
+${alignr}$font kernel ──┤      
+${alignr}$font ${kernel} $machine ──┘    │      
+${alignr}$font │      
+${alignr}$font uptime ──┘      
+${alignr}$font $uptime ──┘           
+${voffset -190}${alignr}$font ─────┐   ┌─────────────────────────────           
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   └─────────────────────────────────────┐  
+${alignr}$font │                                         │  
+${alignr}$font │                                         │  
+${alignr}$font System ──┘  
+${alignr}$font │      
+${alignr}$font cpu ──┤      
+${alignr}$font │    │      
+${alignr}$font used ──┤    │      
+${alignr}$font │    │    │      
+${alignr}$font ${cpu cpu1}% cpu_1 ──┤    │    │      
+${alignr}$font ${cpu cpu2}% cpu_2 ──┤    │    │      
+${alignr}$font ${cpu cpu3}% cpu_3 ──┤    │    │      
+${alignr}$font ${cpu cpu4}% cpu_4 ──┘    │    │      
+${alignr}$font │    │      
+${alignr}$font freq ──┤    │      
+${alignr}$font ${freq}mhz ──┘    │    │      
+${alignr}$font │    │      
+${alignr}$font Temperature ──┤    │      
+${alignr}$font │    │    │      
+${alignr}$font Core_1 ${execi 10 sensors | sed -n '/Core 0/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┤    │    │      
+${alignr}$font Core_2 ${execi 10 sensors | sed -n '/Core 1/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┘    │    │      
+${alignr}$font │    │      
+${alignr}$font ${cpugraph 9,120} ──┤    │      
+${alignr}$font │    │      
+${alignr}$font ${top name 1}  ${top cpu 1} ──┤    │      
+${alignr}$font ${top name 2}  ${top cpu 2} ──┤    │      
+${alignr}$font ${top name 3}  ${top cpu 3} ──┤    │      
+${alignr}$font ${top name 4}  ${top cpu 4} ──┤    │      
+${alignr}$font ${top name 5}  ${top cpu 5} ──┘    │      
+${alignr}$font │      
+${alignr}$font processes ──┘      
+${alignr}$font │           
+${alignr}$font total ──┤           
+${alignr}$font $processes ──┘    │           
+${alignr}$font running ──┘           
+${alignr}$font $running_processes ──┘                
+${voffset -330}${alignr}$font │   ┌───────────────────────────             
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   │                                        
+${alignr}$font │   ├─────────────────────────────────────   
+${alignr}$font │   │                                        
+${alignr}$font └───┘                                        
+]]
