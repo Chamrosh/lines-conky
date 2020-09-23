@@ -40,123 +40,121 @@ default_color = 'FFFFFF',
 }
 conky.text = [[
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
-${alignr}$font ┌──
-${alignr}$font │  
-${alignr}$font ${sysname}
-${alignr}$font │  
-${alignr}$font Time ──┤  
-${alignr}$font │   │  
-${alignr}$font the time ──┤   │  
-${alignr}$font ${time %H:%M:%S} ──┘    │   │  
-${alignr}$font │   │  
-${alignr}$font Battery ──┤   │  
-${alignr}$font ${battery_percent BAT1}% ──┤    │   │  
-${alignr}$font ${battery_bar 4,150 BAT1} ──┘    │   │  
-${alignr}$font │   │  
-${alignr}$font date ──┘   │  
-${alignr}$font ${time %A %d %b %Y} ──┘        │  
-${alignr}$font │  
-${alignr}$font ${nodename} ──┘  
-${alignr}$font │      
-${alignr}$font kernel ──┤      
-${alignr}$font ${kernel} $machine ──┘    │      
-${alignr}$font │      
-${alignr}$font uptime ──┘      
-${alignr}$font $uptime ──┘           
-${voffset -335}${alignr}$font ─────┐   ┌──────────────────────────────────      
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   └─────────────────────────────────────┐  
-${alignr}$font │                                         │  
-${alignr}$font │                                         │  
-${alignr}$font System ──┘  
-${alignr}$font │      
-${alignr}$font cpu ──┤      
-${alignr}$font │    │      
-${alignr}$font used ──┤    │      
-${alignr}$font │    │    │      
-${alignr}$font ${cpu cpu1}% cpu_1 ──┤    │    │      
-${alignr}$font ${cpu cpu2}% cpu_2 ──┤    │    │      
-${alignr}$font ${cpu cpu3}% cpu_3 ──┤    │    │      
-${alignr}$font ${cpu cpu4}% cpu_4 ──┘    │    │      
-${alignr}$font │    │      
-${alignr}$font freq ──┤    │      
-${alignr}$font ${freq}mhz ──┘    │    │      
-${alignr}$font │    │      
-${alignr}$font Temperature ──┤    │      
-${alignr}$font │    │    │      
-${alignr}$font Core_1 ${execi 10 sensors | sed -n '/Core 0/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┤    │    │      
-${alignr}$font Core_2 ${execi 10 sensors | sed -n '/Core 1/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┘    │    │      
-${alignr}$font │    │      
-${alignr}$font ${cpugraph 10,150} ──┤    │      
-${alignr}$font │    │      
-${alignr}$font ${top name 1}  ${top cpu 1} ──┤    │      
-${alignr}$font ${top name 2}  ${top cpu 2} ──┤    │      
-${alignr}$font ${top name 3}  ${top cpu 3} ──┤    │      
-${alignr}$font ${top name 4}  ${top cpu 4} ──┤    │      
-${alignr}$font ${top name 5}  ${top cpu 5} ──┘    │      
-${alignr}$font │      
-${alignr}$font processes ──┘      
-${alignr}$font │           
-${alignr}$font total ──┤           
-${alignr}$font $processes ──┘    │           
-${alignr}$font running ──┘           
-${alignr}$font $running_processes ──┘                
-${voffset -528}${alignr}$font │   ┌───────────────────────────             
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   │                                        
-${alignr}$font │   ├─────────────────────────────────────   
-${alignr}$font │   │                                        
-${alignr}$font └───┘                                        
+${alignr} ┌──
+${alignr} │  
+${alignr} ${sysname}
+${alignr} │  
+${alignr} Time ──┤  
+${alignr} │   │  
+${alignr} the time ──┤   │  
+${alignr} ${time %H:%M:%S} ──┘    │   │  
+${alignr} │   │  
+${alignr} Battery ──┤   │  
+${alignr} ${battery_percent BAT1}% ──┤    │   │  
+${alignr} ${battery_bar 4,150 BAT1} ──┘    │   │  
+${alignr} │   │  
+${alignr} date ──┘   │  
+${alignr} ${time %A %d %b %Y} ──┘        │  
+${alignr} │  
+${alignr} ${nodename} ──┘  
+${alignr} │      
+${alignr} kernel ──┤      
+${alignr} ${kernel} $machine ──┘    │      
+${alignr} │      
+${alignr} uptime ──┘      
+${alignr} $uptime ──┘           
+${voffset -335}${alignr} ─────┐   ┌──────────────────────────────────      
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   └─────────────────────────────────────┐  
+${alignr} │                                         │  
+${alignr} System ──┘  
+${alignr} │      
+${alignr} cpu ──┤      
+${alignr} │    │      
+${alignr} used ──┤    │      
+${alignr} │    │    │      
+${alignr} ${cpu cpu1}% cpu_1 ──┤    │    │      
+${alignr} ${cpu cpu2}% cpu_2 ──┤    │    │      
+${alignr} ${cpu cpu3}% cpu_3 ──┤    │    │      
+${alignr} ${cpu cpu4}% cpu_4 ──┘    │    │      
+${alignr} │    │      
+${alignr} freq ──┤    │      
+${alignr} ${freq}mhz ──┘    │    │      
+${alignr} │    │      
+${alignr} Temperature ──┤    │      
+${alignr} │    │    │      
+${alignr} Core_1 ${execi 10 sensors | sed -n '/Core 0/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┤    │    │      
+${alignr} Core_2 ${execi 10 sensors | sed -n '/Core 1/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┘    │    │      
+${alignr} │    │      
+${alignr} ${cpugraph 10,150} ──┤    │      
+${alignr} │    │      
+${alignr} ${top name 1}  ${top cpu 1} ──┤    │      
+${alignr} ${top name 2}  ${top cpu 2} ──┤    │      
+${alignr} ${top name 3}  ${top cpu 3} ──┤    │      
+${alignr} ${top name 4}  ${top cpu 4} ──┤    │      
+${alignr} ${top name 5}  ${top cpu 5} ──┘    │      
+${alignr} │      
+${alignr} processes ──┘      
+${alignr} │           
+${alignr} total ──┤           
+${alignr} $processes ──┘    │           
+${alignr} running ──┘           
+${alignr} $running_processes ──┘                
+${voffset -528}${alignr} │   ┌───────────────────────────             
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   ├─────────────────────────────────────   
+${alignr} │   │                                        
+${alignr} └───┘                                        
 ]]
-

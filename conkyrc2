@@ -40,114 +40,113 @@ default_color = 'FFFFFF',
 }
 conky.text = [[
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
-${voffset 33}${alignr}$font Resources ─────
-${alignr}$font │      
-${alignr}$font read ──┤      
-${alignr}$font $diskio_read ──┘    │      
-${alignr}$font write ──┤      
-${alignr}$font $diskio_write ──┘    │      
-${alignr}$font │      
-${alignr}$font ram ──┤      
-${alignr}$font │    │      
-${alignr}$font  used ──┤    │      
-${alignr}$font │    │    │      
-${alignr}$font $memperc% ──┤    │    │      
-${alignr}$font $mem $memmax ──┘    │    │      
-${alignr}$font │    │      
-${alignr}$font ${memgraph 10,150} ──┤    │      
-${alignr}$font │    │      
-${alignr}$font ${top_mem name 1}  ${top_mem mem 1} ──┤    │      
-${alignr}$font ${top_mem name 2}  ${top_mem mem 2} ──┤    │      
-${alignr}$font ${top_mem name 3}  ${top_mem mem 3} ──┤    │      
-${alignr}$font ${top_mem name 4}  ${top_mem mem 4} ──┤    │      
-${alignr}$font ${top_mem name 5}  ${top_mem mem 5} ──┘    │      
-${alignr}$font │      
-${alignr}$font │      
-${alignr}$font swap ──┤      
-${alignr}$font │    │      
-${alignr}$font $swapperc% ──┤    │      
-${alignr}$font $swap $swapmax ──┤    │      
-${alignr}$font │    │      
-${alignr}$font ${swapbar 4,150} ──┘    │      
-${alignr}$font │      
-${alignr}$font root ──┘      
-${alignr}$font │           
-${alignr}$font ${fs_free_perc /}% ──┤           
-${alignr}$font ${fs_used /}/${fs_size /} ──┤           
-${alignr}$font │           
-${alignr}$font ${fs_bar 4,150 /} ──┘           
-${voffset -576}${alignr}$font ┌────────────────────────                
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font └─────────────────────────────────────┐  
-${alignr}$font │  
-${alignr}$font │  
-${alignr}$font Network ──┘  
-${alignr}$font │      
-${alignr}$font download ──┤      
-${alignr}$font │    │      
-${alignr}$font ${downspeed wlo1} ──┤    │      
-${alignr}$font ${totaldown wlo1} ──┤    │      
-${alignr}$font │    │      
-${alignr}$font  ${downspeedgraph wlo1 10,150} ──┘    │      
-${alignr}$font │      
-${alignr}$font │      
-${alignr}$font upload ──┘      
-${alignr}$font │           
-${alignr}$font ${upspeed wlo1} ──┤           
-${alignr}$font ${totalup wlo1} ──┤           
-${alignr}$font │           
-${alignr}$font ${upspeedgraph wlo1 10,150} ──┘           
-${voffset -256}${alignr}$font ┌──────────────────────────              
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font │                                        
-${alignr}$font └─────────────────────────────────────   
+${voffset 33}${alignr} Resources ─────
+${alignr} │      
+${alignr} read ──┤      
+${alignr} $diskio_read ──┘    │      
+${alignr} write ──┤      
+${alignr} $diskio_write ──┘    │      
+${alignr} │      
+${alignr} ram ──┤      
+${alignr} │    │      
+${alignr} used ──┤    │      
+${alignr} │    │    │      
+${alignr} $memperc% ──┤    │    │      
+${alignr} $mem $memmax ──┘    │    │      
+${alignr} │    │      
+${alignr} ${memgraph 10,150} ──┤    │      
+${alignr} │    │      
+${alignr} ${top_mem name 1}  ${top_mem mem 1} ──┤    │      
+${alignr} ${top_mem name 2}  ${top_mem mem 2} ──┤    │      
+${alignr} ${top_mem name 3}  ${top_mem mem 3} ──┤    │      
+${alignr} ${top_mem name 4}  ${top_mem mem 4} ──┤    │      
+${alignr} ${top_mem name 5}  ${top_mem mem 5} ──┘    │      
+${alignr} │      
+${alignr} │      
+${alignr} swap ──┤      
+${alignr} │    │      
+${alignr} $swapperc% ──┤    │      
+${alignr} $swap $swapmax ──┤    │      
+${alignr} ${swapbar 4,150} ──┘    │      
+${alignr} │      
+${alignr} root ──┘      
+${alignr} │           
+${alignr} ${fs_used_perc /}% ──┤           
+${alignr} ${fs_used /}/${fs_size /} ──┤           
+${alignr} ${fs_bar 4,150 /} ──┘           
+${voffset -544}${alignr} ┌────────────────────────                
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} └─────────────────────────────────────┐  
+${alignr} │  
+${alignr} Network ──┘  
+${alignr} │      
+${alignr} download ──┤      
+${alignr} │    │      
+${alignr} ${downspeed wlo1} ──┤    │      
+${alignr} ${totaldown wlo1} ──┤    │      
+${alignr} │    │      
+${alignr} ${downspeedgraph wlo1 15,150} ──┘    │      
+${alignr} │      
+${alignr} │      
+${alignr} upload ──┘      
+${alignr} │           
+${alignr} ${upspeed wlo1} ──┤           
+${alignr} ${totalup wlo1} ──┤           
+${alignr} │           
+${alignr} ${upspeedgraph wlo1 15,150} ──┘           
+${voffset -256}${alignr} ┌──────────────────────────              
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} └─────────────────────────────────────┐  
+${alignr} │  
+${alignr} Weather ──┘  
+${alignr} │      
+${alignr} ${execpi 300 curl wttr.in/tehran?format=%l+%t+%h+%w} ──┘      
 ]]
