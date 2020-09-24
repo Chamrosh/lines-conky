@@ -54,7 +54,7 @@ ${alignr} │    │    │
 ${alignr} $memperc% ──┤    │    │      
 ${alignr} $mem $memmax ──┘    │    │      
 ${alignr} │    │      
-${alignr} ${memgraph 10,150} ──┤    │      
+${alignr} ${memgraph 15,150} ──┤    │      
 ${alignr} │    │      
 ${alignr} ${top_mem name 1}  ${top_mem mem 1} ──┤    │      
 ${alignr} ${top_mem name 2}  ${top_mem mem 2} ──┤    │      
