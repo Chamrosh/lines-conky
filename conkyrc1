@@ -106,7 +106,7 @@ ${alignr} │    │    │
 ${alignr} Core_1 ${execi 10 sensors | sed -n '/Core 0/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┤    │    │      
 ${alignr} Core_2 ${execi 10 sensors | sed -n '/Core 1/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┘    │    │      
 ${alignr} │    │      
-${alignr} ${cpugraph 10,150} ──┤    │      
+${alignr} ${cpugraph 15,150} ──┤    │      
 ${alignr} │    │      
 ${alignr} ${top name 1}  ${top cpu 1} ──┤    │      
 ${alignr} ${top name 2}  ${top cpu 2} ──┤    │      
