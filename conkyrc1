@@ -46,12 +46,12 @@ ${alignr} ${sysname}
 ${alignr} │  
 ${alignr} Time ──┤  
 ${alignr} │   │  
-${alignr} the time ──┤   │  
+${alignr} time ──┤   │  
 ${alignr} ${time %H:%M:%S} ──┘    │   │  
 ${alignr} │   │  
 ${alignr} Battery ──┤   │  
-${alignr} ${battery_percent BAT1}% ──┤    │   │  
-${alignr} ${battery_bar 4,150 BAT1} ──┘    │   │  
+${alignr} ${battery_short BAT1} ──┤    │   │  
+${alignr} ${battery_time BAT1} ──┘    │   │  
 ${alignr} │   │  
 ${alignr} date ──┘   │  
 ${alignr} ${time %A %d %b %Y} ──┘        │  
@@ -84,7 +84,6 @@ ${alignr} │   │
 ${alignr} │   │                                        
 ${alignr} │   │                                        
 ${alignr} │   │                                        
-${alignr} │   │                                        
 ${alignr} │   └─────────────────────────────────────┐  
 ${alignr} │                                         │  
 ${alignr} System ──┘  
@@ -92,21 +91,19 @@ ${alignr} │
 ${alignr} cpu ──┤      
 ${alignr} │    │      
 ${alignr} used ──┤    │      
-${alignr} │    │    │      
 ${alignr} ${cpu cpu1}% cpu_1 ──┤    │    │      
 ${alignr} ${cpu cpu2}% cpu_2 ──┤    │    │      
 ${alignr} ${cpu cpu3}% cpu_3 ──┤    │    │      
 ${alignr} ${cpu cpu4}% cpu_4 ──┘    │    │      
 ${alignr} │    │      
 ${alignr} freq ──┤    │      
-${alignr} ${freq}mhz ──┘    │    │      
+${alignr} ${freq_g} GHz ──┘    │    │      
 ${alignr} │    │      
 ${alignr} Temperature ──┤    │      
-${alignr} │    │    │      
 ${alignr} Core_1 ${execi 10 sensors | sed -n '/Core 0/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┤    │    │      
 ${alignr} Core_2 ${execi 10 sensors | sed -n '/Core 1/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┘    │    │      
 ${alignr} │    │      
-${alignr} ${cpugraph 15,150} ──┤    │      
+${alignr} ${cpugraph 15,170} ──┤    │      
 ${alignr} │    │      
 ${alignr} ${top name 1}  ${top cpu 1} ──┤    │      
 ${alignr} ${top name 2}  ${top cpu 2} ──┤    │      
@@ -118,9 +115,14 @@ ${alignr} processes ──┘
 ${alignr} │           
 ${alignr} total ──┤           
 ${alignr} $processes ──┘    │           
-${alignr} running ──┘           
-${alignr} $running_processes ──┘                
-${voffset -528}${alignr} │   ┌───────────────────────────             
+${alignr} running ──┤           
+${alignr} $running_processes ──┘    │           
+${alignr} ${diskiograph_read 10,100} <<  read ──┤           
+${alignr} $diskio_read ──┘    │           
+${alignr} ${diskiograph_write 10,100} << write ──┘           
+${alignr} $diskio_write ──┘                
+${voffset -560}${alignr} │   ┌───────────────────────────             
+${alignr} │   │                                        
 ${alignr} │   │                                        
 ${alignr} │   │                                        
 ${alignr} │   │                                        

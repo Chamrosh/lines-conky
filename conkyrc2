@@ -40,21 +40,14 @@ default_color = 'FFFFFF',
 }
 conky.text = [[
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+#red,green,yellow,blue,magenta,cyan,black,white
 ${voffset 33}${alignr} Resources ─────
-${alignr} │      
-${alignr} read ──┤      
-${alignr} $diskio_read ──┘    │      
-${alignr} write ──┤      
-${alignr} $diskio_write ──┘    │      
 ${alignr} │      
 ${alignr} ram ──┤      
 ${alignr} │    │      
-${alignr} used ──┤    │      
-${alignr} │    │    │      
-${alignr} $memperc% ──┤    │    │      
-${alignr} $mem $memmax ──┘    │    │      
-${alignr} │    │      
-${alignr} ${memgraph 15,150} ──┤    │      
+${alignr} $memeasyfree << free ──┤    │      
+${alignr} $memperc% << $mem / $memmax ──┤    │      
+${alignr} ${membar 5,170} ──┤    │      
 ${alignr} │    │      
 ${alignr} ${top_mem name 1}  ${top_mem mem 1} ──┤    │      
 ${alignr} ${top_mem name 2}  ${top_mem mem 2} ──┤    │      
@@ -62,35 +55,12 @@ ${alignr} ${top_mem name 3}  ${top_mem mem 3} ──┤    │
 ${alignr} ${top_mem name 4}  ${top_mem mem 4} ──┤    │      
 ${alignr} ${top_mem name 5}  ${top_mem mem 5} ──┘    │      
 ${alignr} │      
+${alignr} $fs_type << root ──┤      
+${alignr} ${fs_used_perc /}% << ${fs_used /} / ${fs_size /} ──┘    │      
 ${alignr} │      
-${alignr} swap ──┤      
-${alignr} │    │      
-${alignr} $swapperc% ──┤    │      
-${alignr} $swap $swapmax ──┤    │      
-${alignr} ${swapbar 4,150} ──┘    │      
-${alignr} │      
-${alignr} root ──┘      
-${alignr} │           
-${alignr} ${fs_used_perc /}% ──┤           
-${alignr} ${fs_used /}/${fs_size /} ──┤           
-${alignr} ${fs_bar 4,150 /} ──┘           
-${voffset -544}${alignr} ┌────────────────────────                
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
+${alignr} swap ──┘      
+${alignr} $swapperc% << $swap / $swapmax ──┘           
+${voffset -304}${alignr} ┌────────────────────────                
 ${alignr} │                                        
 ${alignr} │                                        
 ${alignr} │                                        
@@ -113,25 +83,18 @@ ${alignr} └──────────────────────�
 ${alignr} │  
 ${alignr} Network ──┘  
 ${alignr} │      
-${alignr} download ──┤      
-${alignr} │    │      
-${alignr} ${downspeed wlo1} ──┤    │      
-${alignr} ${totaldown wlo1} ──┤    │      
-${alignr} │    │      
-${alignr} ${downspeedgraph wlo1 15,150} ──┘    │      
+${alignr} $gw_iface $gw_ip ──┤      
 ${alignr} │      
+${alignr} download ──┤      
+${alignr} ${downspeedf wlo1} ──┤    │      
+${alignr} ${totaldown wlo1} ──┤    │      
+${alignr} ${downspeedgraph wlo1 15,170} ──┘    │      
 ${alignr} │      
 ${alignr} upload ──┘      
-${alignr} │           
-${alignr} ${upspeed wlo1} ──┤           
+${alignr} ${upspeedf wlo1} ──┤           
 ${alignr} ${totalup wlo1} ──┤           
-${alignr} │           
-${alignr} ${upspeedgraph wlo1 15,150} ──┘           
-${voffset -256}${alignr} ┌──────────────────────────              
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
+${alignr} ${upspeedgraph wlo1 15,170} ──┘           
+${voffset -208}${alignr} ┌──────────────────────────              
 ${alignr} │                                        
 ${alignr} │                                        
 ${alignr} │                                        
@@ -148,5 +111,17 @@ ${alignr} └──────────────────────�
 ${alignr} │  
 ${alignr} Weather ──┘  
 ${alignr} │      
-${alignr} ${execpi 300 curl wttr.in/tehran?format=%l+%t+%h+%w} ──┘      
+${alignr} ${execpi 300 curl wttr.in/tehran?format=%C} << Tehran ──┤      
+${alignr} ${execpi 300 curl wttr.in/tehran?format=%t+%h+%w} ──┘    │      
+${alignr} │      
+${alignr} ${execpi 300 curl wttr.in/babol?format=%C} <<  Babol ──┘      
+${alignr} ${execpi 300 curl wttr.in/babol?format=%t+%h+%w} ──┘           
+${voffset -112}${alignr} ┌──────────────────────────              
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} │                                        
+${alignr} └──────────────────────────────────────  
 ]]
