@@ -43,9 +43,6 @@ conky.text = [[
 #red,green,yellow,blue,magenta,cyan,black,white
 ${voffset 33}${alignr} ram ─────
 ${alignr} │      
-${alignr} free ──┤      
-${alignr} $memeasyfree ──┘    │      
-${alignr} │      
 ${alignr}  free ───── used ───── total ──┤      
 ${alignr}    ▼          ▼          ▼     │      
 ${alignr} $memeasyfree    $mem    $memmax  │      
@@ -57,10 +54,7 @@ ${alignr} ${top_mem name 2}      ${top_mem mem 2} ──┤
 ${alignr} ${top_mem name 3}      ${top_mem mem 3} ──┤      
 ${alignr} ${top_mem name 4}      ${top_mem mem 4} ──┤      
 ${alignr} ${top_mem name 5}      ${top_mem mem 5} ──┘      
-${voffset -256}${alignr} ┌──────────────────────────────          
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
+${voffset -208}${alignr} ┌──────────────────────────────          
 ${alignr} │                                        
 ${alignr} │                                        
 ${alignr} │                                        
