@@ -23,7 +23,7 @@ minimum_width = 256,
 maximum_width = 400,
 alignment = 'top_right',
 gap_x = 0,
-gap_y = 40,
+gap_y = 130,
 draw_shades = false,
 draw_outline = false,
 draw_borders = false,
@@ -97,6 +97,9 @@ ${alignr} │
 ${alignr} freq ──┤      
 ${alignr} ${freq_g} GHz ──┘    │      
 ${alignr} │      
+${alignr} processes ──┤      
+${alignr} $running_processes / $processes ──┘    │      
+${alignr} │      
 ${alignr} Temperature ──┤      
 ${alignr} Core_1 ${execi 10 sensors | sed -n '/Core 0/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┤    │      
 ${alignr} Core_2 ${execi 10 sensors | sed -n '/Core 1/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┘    │      
@@ -108,7 +111,10 @@ ${alignr} ${top name 2}      ${top cpu 2} ──┤
 ${alignr} ${top name 3}      ${top cpu 3} ──┤      
 ${alignr} ${top name 4}      ${top cpu 4} ──┤      
 ${alignr} ${top name 5}      ${top cpu 5} ──┘      
-${voffset -352}${alignr} │   ┌──────────────────────────────          
+${voffset -400}${alignr} │   ┌──────────────────────────────          
+${alignr} │   │                                        
+${alignr} │   │                                        
+${alignr} │   │                                        
 ${alignr} │   │                                        
 ${alignr} │   │                                        
 ${alignr} │   │                                        
