@@ -23,7 +23,7 @@ minimum_width = 256,
 maximum_width = 400,
 alignment = 'top_right',
 gap_x = 355,
-gap_y = 40,
+gap_y = 130,
 draw_shades = false,
 draw_outline = false,
 draw_borders = false,
@@ -89,7 +89,9 @@ ${alignr} └──────────────────────�
 ${alignr} │  
 ${alignr} Network ──┘  
 ${alignr} │      
-${alignr} ${execi 240 curl https://api.ipify.org} ──┤      
+${alignr} ${execi 240 curl https://api.ipify.org} << ip ──┤      
+${alignr} │      
+${alignr} ${wireless_link_qual wlo1}% << ${wireless_essid wlo1} ──┤      
 ${alignr} │      
 ${alignr} download ──┤      
 ${alignr} ${downspeedf wlo1} ──┤    │      
@@ -100,7 +102,9 @@ ${alignr} upload ──┘
 ${alignr} ${upspeedf wlo1} ──┤           
 ${alignr} ${totalup wlo1} ──┤           
 ${alignr} ${upspeedgraph wlo1 15,170} ──┘           
-${voffset -208}${alignr} ┌──────────────────────────              
+${voffset -240}${alignr} ┌──────────────────────────              
+${alignr} │                                        
+${alignr} │                                        
 ${alignr} │                                        
 ${alignr} │                                        
 ${alignr} │                                        
