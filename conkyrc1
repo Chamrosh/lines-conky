@@ -10,7 +10,7 @@ text_buffer_size = 2048,
 temperature_unit = 'celsius',
 own_window_class = 'Conky',
 own_window = true,
-own_window_type = 'normal',
+own_window_type = 'desktop',
 own_window_transparent = true,
 own_window_argb_visual = true,
 own_window_argb_value = 255,
@@ -23,7 +23,7 @@ minimum_width = 256,
 maximum_width = 400,
 alignment = 'top_right',
 gap_x = 0,
-gap_y = 130,
+gap_y = 120,
 draw_shades = false,
 draw_outline = false,
 draw_borders = false,
@@ -49,21 +49,24 @@ ${alignr} │   │
 ${alignr} time ──┤   │  
 ${alignr} ${time %H:%M:%S} ──┘    │   │  
 ${alignr} │   │  
-${alignr} Battery ──┤   │  
-${alignr} ${battery_short BAT1} ──┤    │   │  
-${alignr} ${battery_time BAT1} ──┘    │   │  
+${alignr} date ──┤   │  
+${alignr} ${time %A %d %b %Y} ──┘    │   │  
 ${alignr} │   │  
-${alignr} date ──┘   │  
-${alignr} ${time %A %d %b %Y} ──┘        │  
+${alignr} uptime ──┘   │  
+${alignr} $uptime ──┘        │  
 ${alignr} │  
 ${alignr} ${nodename} ──┘  
 ${alignr} │      
 ${alignr} kernel ──┤      
-${alignr} ${kernel} $machine ──┘    │      
+${alignr} $machine ──┤    │      
+${alignr} ${kernel} ──┘    │      
 ${alignr} │      
-${alignr} uptime ──┘      
-${alignr} $uptime ──┘           
-${voffset -335}${alignr} ─────┐   ┌──────────────────────────────────      
+${alignr} Battery ──┘      
+${alignr} ${battery_short BAT1} ──┤           
+${alignr} ${battery_time BAT1} ──┘           
+${voffset -350}${alignr} ─────┐   ┌──────────────────────────────────      
+${alignr} │   │                                        
+${alignr} │   │                                        
 ${alignr} │   │                                        
 ${alignr} │   │                                        
 ${alignr} │   │                                        

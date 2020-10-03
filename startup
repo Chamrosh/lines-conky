@@ -1,0 +1,4 @@
+#!/bin/bash
+sleep 15
+conky -c /home/mohammad/.config/conkyrc/conkyrc1 &
+conky -c /home/mohammad/.config/conkyrc/conkyrc2 & exit

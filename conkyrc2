@@ -10,7 +10,7 @@ text_buffer_size = 2048,
 temperature_unit = 'celsius',
 own_window_class = 'Conky',
 own_window = true,
-own_window_type = 'normal',
+own_window_type = 'desktop',
 own_window_transparent = true,
 own_window_argb_visual = true,
 own_window_argb_value = 255,
@@ -23,7 +23,7 @@ minimum_width = 256,
 maximum_width = 400,
 alignment = 'top_right',
 gap_x = 355,
-gap_y = 130,
+gap_y = 120,
 draw_shades = false,
 draw_outline = false,
 draw_borders = false,
@@ -41,7 +41,7 @@ default_color = 'FFFFFF',
 conky.text = [[
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
 #red,green,yellow,blue,magenta,cyan,black,white
-${voffset 33}${alignr} ram ─────
+${voffset 34}${alignr} ram ─────
 ${alignr} │      
 ${alignr}  free ───── used ───── total ──┤      
 ${alignr}    ▼          ▼          ▼     │      
@@ -125,8 +125,8 @@ ${alignr} │
 ${alignr} ${execpi 300 curl wttr.in/tehran?format=%C} << Tehran ──┤      
 ${alignr} ${execpi 300 curl wttr.in/tehran?format=%t+%h+%w} ──┘    │      
 ${alignr} │      
-${alignr} ${execpi 300 curl wttr.in/babol?format=%C} <<  Babol ──┘      
-${alignr} ${execpi 300 curl wttr.in/babol?format=%t+%h+%w} ──┘           
+${alignr} ${execpi 300 curl wttr.in/Kebria?format=%C} << Kebria ──┘      
+${alignr} ${execpi 300 curl wttr.in/Kebria?format=%t+%h+%w} ──┘           
 ${voffset -112}${alignr} ┌──────────────────────────              
 ${alignr} │                                        
 ${alignr} │                                        
@@ -137,3 +137,4 @@ ${alignr} │
 ${alignr} │                                        
 ${alignr} └──────────────────────────────────────  
 ]]
+
