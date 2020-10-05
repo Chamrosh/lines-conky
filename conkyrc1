@@ -20,10 +20,10 @@ border_inner_margin = 0,
 border_outer_margin = 0,
 minimum_height = 500,
 minimum_width = 256,
-maximum_width = 400,
+maximum_width = 450,
 alignment = 'top_right',
 gap_x = 0,
-gap_y = 120,
+gap_y = 100,
 draw_shades = false,
 draw_outline = false,
 draw_borders = false,
@@ -64,38 +64,38 @@ ${alignr} │
 ${alignr} Battery ──┘      
 ${alignr} ${battery_short BAT1} ──┤           
 ${alignr} ${battery_time BAT1} ──┘           
-${voffset -350}${alignr} ─────┐   ┌──────────────────────────────────      
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   └─────────────────────────────────────┐  
-${alignr} │                                         │  
+${voffset -350}${alignr} ─────┐   ┌───────────────────────────────────────      
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   └──────────────────────────────────────────┐  
+${alignr} │                                         │       
 ${alignr} cpu ──┘  
 ${alignr} │      
 ${alignr} used ──┤      
-${alignr} ${cpu cpu1}% cpu_1 ──┤    │      
-${alignr} ${cpu cpu2}% cpu_2 ──┤    │      
-${alignr} ${cpu cpu3}% cpu_3 ──┤    │      
-${alignr} ${cpu cpu4}% cpu_4 ──┘    │      
+${alignr} ${cpu cpu1}%   cpu_1 ──┤    │      
+${alignr} ${cpu cpu2}%   cpu_2 ──┤    │      
+${alignr} ${cpu cpu3}%   cpu_3 ──┤    │      
+${alignr} ${cpu cpu4}%   cpu_4 ──┘    │      
 ${alignr} │      
 ${alignr} freq ──┤      
 ${alignr} ${freq_g} GHz ──┘    │      
@@ -107,39 +107,39 @@ ${alignr} Temperature ──┤
 ${alignr} Core_1 ${execi 10 sensors | sed -n '/Core 0/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┤    │      
 ${alignr} Core_2 ${execi 10 sensors | sed -n '/Core 1/{s/.*:[ ]*+\([0-9]*\).*/\1/p}'}°C  ──┘    │      
 ${alignr} │      
-${alignr} ${cpugraph 15,200} ──┤      
+${alignr} ${cpugraph 15,230} ──┤      
 ${alignr} │      
-${alignr} ${top name 1}      ${top cpu 1} ──┤      
-${alignr} ${top name 2}      ${top cpu 2} ──┤      
-${alignr} ${top name 3}      ${top cpu 3} ──┤      
-${alignr} ${top name 4}      ${top cpu 4} ──┤      
-${alignr} ${top name 5}      ${top cpu 5} ──┘      
-${voffset -400}${alignr} │   ┌──────────────────────────────          
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   │                                        
-${alignr} │   ├─────────────────────────────────────   
-${alignr} └───┘                                        
+${alignr} ${top name 1}           ${top cpu 1} ──┤      
+${alignr} ${top name 2}           ${top cpu 2} ──┤      
+${alignr} ${top name 3}           ${top cpu 3} ──┤      
+${alignr} ${top name 4}           ${top cpu 4} ──┤      
+${alignr} ${top name 5}           ${top cpu 5} ──┘      
+${voffset -400}${alignr} │   ┌───────────────────────────────────          
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   │                                             
+${alignr} │   ├──────────────────────────────────────────   
+${alignr} └───┘                                             
 ]]

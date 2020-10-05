@@ -20,10 +20,10 @@ border_inner_margin = 0,
 border_outer_margin = 0,
 minimum_height = 500,
 minimum_width = 256,
-maximum_width = 400,
+maximum_width = 450,
 alignment = 'top_right',
-gap_x = 355,
-gap_y = 120,
+gap_x = 390,
+gap_y = 100,
 draw_shades = false,
 draw_outline = false,
 draw_borders = false,
@@ -43,32 +43,32 @@ conky.text = [[
 #red,green,yellow,blue,magenta,cyan,black,white
 ${voffset 34}${alignr} ram ─────
 ${alignr} │      
-${alignr}  free ───── used ───── total ──┤      
-${alignr}    ▼          ▼          ▼     │      
-${alignr} $memeasyfree    $mem    $memmax  │      
+${alignr}  free ────── used ────── total ──┤      
+${alignr}    ▼           ▼           ▼      │      
+${alignr} $memeasyfree      $mem      $memmax  │      
 ${alignr} │      
-${alignr} ${membar 5,175} $memperc% ──┤      
+${alignr} ${membar 5,200} $memperc% ──┤      
 ${alignr} │      
-${alignr} ${top_mem name 1}      ${top_mem mem 1} ──┤      
-${alignr} ${top_mem name 2}      ${top_mem mem 2} ──┤      
-${alignr} ${top_mem name 3}      ${top_mem mem 3} ──┤      
-${alignr} ${top_mem name 4}      ${top_mem mem 4} ──┤      
-${alignr} ${top_mem name 5}      ${top_mem mem 5} ──┘      
-${voffset -208}${alignr} ┌──────────────────────────────          
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} └─────────────────────────────────────┐  
+${alignr} ${top_mem name 1}           ${top_mem mem 1} ──┤      
+${alignr} ${top_mem name 2}           ${top_mem mem 2} ──┤      
+${alignr} ${top_mem name 3}           ${top_mem mem 3} ──┤      
+${alignr} ${top_mem name 4}           ${top_mem mem 4} ──┤      
+${alignr} ${top_mem name 5}           ${top_mem mem 5} ──┘      
+${voffset -208}${alignr} ┌───────────────────────────────────          
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} └──────────────────────────────────────────┐  
 ${alignr} │  
 ${alignr} SSD ──┘  
 ${alignr} │      
@@ -77,15 +77,15 @@ ${alignr} ${fs_used_perc /}% << ${fs_used /} / ${fs_size /} ──┘    │
 ${alignr} │      
 ${alignr} swap ──┘      
 ${alignr} $swapperc% << $swap / $swapmax ──┘           
-${voffset -112}${alignr} ┌──────────────────────────────          
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} └─────────────────────────────────────┐  
+${voffset -112}${alignr} ┌───────────────────────────────────          
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} └──────────────────────────────────────────┐  
 ${alignr} │  
 ${alignr} Network ──┘  
 ${alignr} │      
@@ -96,29 +96,29 @@ ${alignr} │
 ${alignr} download ──┤      
 ${alignr} ${downspeedf wlo1} ──┤    │      
 ${alignr} ${totaldown wlo1} ──┤    │      
-${alignr} ${downspeedgraph wlo1 15,170} ──┘    │      
+${alignr} ${downspeedgraph wlo1 15,200} ──┘    │      
 ${alignr} │      
 ${alignr} upload ──┘      
 ${alignr} ${upspeedf wlo1} ──┤           
 ${alignr} ${totalup wlo1} ──┤           
-${alignr} ${upspeedgraph wlo1 15,170} ──┘           
-${voffset -240}${alignr} ┌──────────────────────────              
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} └─────────────────────────────────────┐  
+${alignr} ${upspeedgraph wlo1 15,200} ──┘           
+${voffset -240}${alignr} ┌───────────────────────────────              
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} └──────────────────────────────────────────┐  
 ${alignr} │  
 ${alignr} Weather ──┘  
 ${alignr} │      
@@ -127,14 +127,13 @@ ${alignr} ${execpi 300 curl wttr.in/tehran?format=%t+%h+%w} ──┘    │
 ${alignr} │      
 ${alignr} ${execpi 300 curl wttr.in/Kebria?format=%C} << Kebria ──┘      
 ${alignr} ${execpi 300 curl wttr.in/Kebria?format=%t+%h+%w} ──┘           
-${voffset -112}${alignr} ┌──────────────────────────              
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} │                                        
-${alignr} └──────────────────────────────────────  
+${voffset -112}${alignr} ┌───────────────────────────────              
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} │                                             
+${alignr} └───────────────────────────────────────────  
 ]]
-
