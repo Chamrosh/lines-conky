@@ -45,7 +45,7 @@ ${voffset 34}${alignr} ram ─────
 ${alignr} │      
 ${alignr}  free ────── used ────── total ──┤      
 ${alignr}    ▼           ▼           ▼      │      
-${alignr} $memeasyfree      $mem      $memmax  │      
+${alignr} $memeasyfree     $mem     $memmax  │      
 ${alignr} │      
 ${alignr} ${membar 5,200} $memperc% ──┤      
 ${alignr} │      
