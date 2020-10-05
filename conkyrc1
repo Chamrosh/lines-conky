@@ -88,7 +88,7 @@ ${alignr} │   │
 ${alignr} │   │                                             
 ${alignr} │   │                                             
 ${alignr} │   └──────────────────────────────────────────┐  
-${alignr} │                                         │       
+${alignr} │                                              │  
 ${alignr} cpu ──┘  
 ${alignr} │      
 ${alignr} used ──┤      
