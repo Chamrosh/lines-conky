@@ -89,7 +89,7 @@ ${alignr} └──────────────────────�
 ${alignr} │  
 ${alignr} Network ──┘  
 ${alignr} │      
-${alignr} ${execi 240 curl https://api.ipify.org} << ip ──┤      
+${alignr} ${execi 240 curl icanhazip.com} << ip ──┤      
 ${alignr} │      
 ${alignr} ${wireless_link_qual wlo1}% << ${wireless_essid wlo1} ──┤      
 ${alignr} │      
